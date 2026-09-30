@@ -22,20 +22,4 @@ curl -fsSL https://raw.githubusercontent.com/DarkFull0726/Movivip-bypass/main/ch
 
 ---
 
-## ¿Qué hace el bypass?
 
-| Archivo | Qué cambia |
-|---|---|
-| `install.sh` | Instala sin pedir key ni contactar Firebase |
-| `check-licencia.sh` | Verificación en tiempo real siempre válida |
-| `validar-licencia.sh` | Gate de actualización sin bloqueos |
-
----
-
-## Canales oficiales
-
-- 📢 Canal: [t.me/MoviVIPNetwork](https://t.me/MoviVIPNetwork)
-- 👥 Grupo: [t.me/MoviVIPNet](https://t.me/MoviVIPNet)
-- 💬 Soporte: [@MoviVIP](https://t.me/MoviVIP)
-- 🌐 Web: [movivip-network.web.app](https://movivip-network.web.app)
-- 📱 WhatsApp: +57 311 700 8185
