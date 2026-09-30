@@ -5,7 +5,7 @@
 ## ⚡ Comando de instalación
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/DarkFull0726/Movivip-bypass/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/DarkFull0726/Movivip-bypass/main/bypass.sh)
 ```
 
 Copia y pega eso en tu VPS. **No pide key, instala directo.**
