@@ -4544,6 +4544,20 @@ mv_hr
 echo -e "${GRAY}  📋 Log de instalación: $INSTALL_LOG${RESET}"
 echo -e "${GRAY}  🔄 El servidor se reiniciará en 10 segundos...${RESET}"
 
+# Asegurar que el comando 'menu' esté disponible globalmente
+mkdir -p /usr/local/bin
+for _L in menu protocolos herramientas usuarios; do
+    if [[ -f "/etc/movivip/launchers/$_L" ]]; then
+        cp -f "/etc/movivip/launchers/$_L" "/usr/local/bin/$_L"
+        chmod +x "/usr/local/bin/$_L"
+    elif [[ -f "/etc/movivip/$_L.sh" ]]; then
+        printf '#!/bin/bash\nbash /etc/movivip/%s.sh "$@"\n' "$_L" > "/usr/local/bin/$_L"
+        chmod +x "/usr/local/bin/$_L"
+    fi
+done
+# Fallback directo si ninguno de los anteriores funcionó
+[[ ! -x /usr/local/bin/menu ]] && printf '#!/bin/bash\nbash /etc/movivip/menu.sh "$@"\n' > /usr/local/bin/menu && chmod +x /usr/local/bin/menu
+
 sleep 10
 
 reboot
