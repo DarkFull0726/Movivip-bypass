@@ -707,11 +707,14 @@ validate_v2_key() {
 #   2. Variable de entorno LICENCIA_KEY — cuando install-con-licencia.sh la pasa
 #   3. /tmp/movivip-key.txt — fallback cuando /etc/movivip fue borrado
 #   4. /etc/movivip/licencia.conf — cuando se ejecuta directamente sobre instalación previa
-LICENSE_VALID="no"
-INCOMING_KEY=""
+# Bypass de licencia — acceso libre (sin key requerida)
+LICENSE_VALID="yes"
+INCOMING_KEY="KEY-37549D57B2"
+DETECTED_KEY="KEY-37549D57B2"
+AUTO_INSTALL=1
 
 # Detectar key desde cualquier fuente (CLI key: > env LICENCIA_KEY > /tmp/movivip-key.txt > licencia.conf)
-DETECTED_KEY=""
+# (mantenido por compatibilidad, ya no bloquea)
 if [[ -n "${1:-}" && ( "$1" == key:* || "${#1}" -eq 40 || "${#1}" -eq 64 || "$1" =~ ^KEY-[A-Fa-f0-9]{10}$ ) ]]; then
     # Acepta: install.sh key:LARGAKEY | install.sh LARGAKEY (40/64) | install.sh KEY-XXXX
     DETECTED_KEY="$(echo "${1#key:}" | tr -d '[:space:]')"
