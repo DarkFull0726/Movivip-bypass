@@ -1,6 +1,8 @@
 # MoviVIP Network — Sin Licencia 🔓
 
-> **Regalía del equipo MoviVIP** — Instala gratis, sin key, sin bloqueos.
+> ** MoviVIP** — Instala gratis, sin key, sin bloqueos.
+>
+> violado por t.me/DarkZFull 
 
 ## ⚡ Comando de instalación
 
