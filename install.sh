@@ -4558,6 +4558,11 @@ done
 # Fallback directo si ninguno de los anteriores funcionó
 [[ ! -x /usr/local/bin/menu ]] && printf '#!/bin/bash\nbash /etc/movivip/menu.sh "$@"\n' > /usr/local/bin/menu && chmod +x /usr/local/bin/menu
 
+# Neutralizar auto-update para que no descargue install.sh original de studioanime977
+for _U in /etc/movivip/auto-update.sh /etc/movivip/updater.sh /etc/movivip/update.sh; do
+    [[ -f "$_U" ]] && ! grep -q "^exit 0" "$_U" && sed -i '2i # Auto-update desactivado — instalación sin licencia\nexit 0' "$_U"
+done
+
 sleep 10
 
 reboot
