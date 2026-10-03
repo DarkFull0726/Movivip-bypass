@@ -19,7 +19,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 PAYLOAD_URL="https://github.com/DarkFull0726/Movivip-bypass/releases/download/v8.2.18/MoviVIPNetwork-bypass-v8.2.18.tar.gz"
-WORK_DIR="/tmp/movivip-bypass-install"
+WORK_DIR="/tmp/multi-script"
 
 echo -e "${CYAN}[1/2] Descargando MoviVIP Network...${NC}"
 rm -rf "$WORK_DIR" && mkdir -p "$WORK_DIR"
