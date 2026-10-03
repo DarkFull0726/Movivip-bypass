@@ -2740,6 +2740,8 @@ if [[ -n "${MOVIVIP_SRC:-}" && -f "$MOVIVIP_SRC/menu.sh" && -d "$MOVIVIP_SRC/pro
     SRC_DIR="$MOVIVIP_SRC"
 elif [[ -f "$(pwd)/menu.sh" && -d "$(pwd)/protocolos" ]]; then
     SRC_DIR="$(pwd)"
+elif [[ -f /tmp/movivip-bypass-install/menu.sh && -d /tmp/movivip-bypass-install/protocolos ]]; then
+    SRC_DIR="/tmp/movivip-bypass-install"
 elif [[ -f /root/scrip_vps_todo/menu.sh && -d /root/scrip_vps_todo/protocolos ]]; then
     SRC_DIR="/root/scrip_vps_todo"
 elif [[ -f /tmp/multi-script/menu.sh && -d /tmp/multi-script/protocolos ]]; then
