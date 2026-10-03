@@ -18,7 +18,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-PAYLOAD_URL="https://github.com/DarkFull0726/script-sin-verificacion/releases/download/v8.2.18/MoviVIPNetwork-bypass-v8.2.18.tar.gz"
+PAYLOAD_URL="https://github.com/DarkFull0726/Movivip-bypass/releases/download/v8.2.18/MoviVIPNetwork-bypass-v8.2.18.tar.gz"
 WORK_DIR="/tmp/movivip-bypass-install"
 
 echo -e "${CYAN}[1/2] Descargando MoviVIP Network...${NC}"
